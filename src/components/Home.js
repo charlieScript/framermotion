@@ -1,39 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
-    <motion.div
-      className="home container"
-      transition={{ delay: 1.5, duration: 1 }}
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        // opacity: 0.5, marginTop: '1.5rem'
-        opacity: 1,
-      }}>
-      <motion.h2
-        animate={
-          {
-            // fontSize: 50,
-            // color: "red",
-            // x: 100,
-          }
-        }>
-        Welcome to Pizza Joint
-      </motion.h2>
+    <div className="home container">
+      <h2>Welcome to Pizza Joint</h2>
       <Link to="/base">
-        <motion.button 
-          whileHover={{
-            scale: 1.1
-          }}
-        >
-          Create Your Pizza
-        </motion.button>
+        <button>Create Your Pizza</button>
       </Link>
-    </motion.div>
+    </div>
   );
 };
 
